@@ -11,4 +11,9 @@ resource "aws_instance" "web-instance" {
             sudo systemctl start apache2
             echo "<html><h1>Hello, I am implemented Highly Available 3-tier VPC architechture with ALB, Auto Scaling, and RDS Multi-AZ </html></h1> " > /var/www/html/index.html
             EOF
+  tags = {
+    Name="web-server"
+  }
 }
+
+
